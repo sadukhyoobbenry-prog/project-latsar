@@ -380,10 +380,12 @@ export default function UnduhHargaPage() {
                   Indonesian,
                 allowInput: true,
               }}
-              value={[
-                tanggalAwal || undefined,
-                tanggalAkhir || undefined,
-              ]}
+              value={
+              [
+                tanggalAwal,
+                tanggalAkhir,
+              ].filter(Boolean) as Date[]
+            }
               onChange={(
                 dates: Date[]
               ) => {
