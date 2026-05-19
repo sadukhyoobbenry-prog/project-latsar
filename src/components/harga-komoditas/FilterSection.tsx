@@ -1,13 +1,34 @@
 "use client";
 
 type FilterSectionProps = {
+
   komoditas: string;
-  setKomoditas: (value: string) => void;
+
+  setKomoditas:
+    React.Dispatch<
+      React.SetStateAction<string>
+    >;
+
+  tanggal: Date | null;
+
+  setTanggal:
+    React.Dispatch<
+      React.SetStateAction<
+        Date | null
+      >
+    >;
+
 };
 
-export default function FilterSection({
+export default function
+FilterSection({
+
   komoditas,
   setKomoditas,
+
+  tanggal,
+  setTanggal,
+
 }: FilterSectionProps) {
 
   // DATA KOMODITAS
