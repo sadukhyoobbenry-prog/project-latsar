@@ -235,10 +235,12 @@ export default function PerbandinganTable() {
                 Indonesian,
               allowInput: true,
             }}
-            value={[
-              tanggalSebelum,
-              tanggalSesudah,
-            ]}
+            value={
+              [
+                tanggalSebelum,
+                tanggalSesudah,
+              ].filter(Boolean) as Date[]
+            }
             onChange={(
               dates: Date[]
             ) => {
