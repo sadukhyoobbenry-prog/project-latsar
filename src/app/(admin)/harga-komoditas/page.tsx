@@ -43,7 +43,6 @@ export default function HargaKomoditasPage() {
       {/* ===================== */}
       <HargaChart
         komoditas={komoditas}
-        tanggal={tanggal}
       />
 
       {/* ===================== */}

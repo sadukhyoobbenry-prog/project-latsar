@@ -8,12 +8,10 @@ import { hargaData } from "../../data/HargaData";
 
 type HargaChartProps = {
   komoditas: string;
-  tanggal: Date | null;
 };
 
 export default function HargaChart({
   komoditas,
-  tanggal,
 }: HargaChartProps) {
 
   // =========================
