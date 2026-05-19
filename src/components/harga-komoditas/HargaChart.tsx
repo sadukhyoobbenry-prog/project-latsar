@@ -253,12 +253,14 @@ export default function HargaChart({
       selectedData.slice(-10, -5);
 
     hargaSekarang =
-      mingguIni.length > 0
-        ? mingguIni.reduce(
-            (sum, item) =>
-              sum + item.harga,
-            0
-          ) / mingguIni.length
+      mingguIni.reduce(
+        (
+          sum: number,
+          item: HargaItem
+        ) =>
+          sum + item.harga,
+        0
+      ) / mingguIni.length
         : 0;
 
     hargaSebelumnya =
