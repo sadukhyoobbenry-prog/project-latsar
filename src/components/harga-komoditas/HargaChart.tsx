@@ -253,20 +253,24 @@ export default function HargaChart({
       selectedData.slice(-10, -5);
 
     hargaSekarang =
-      mingguIni.reduce(
-        (
-          sum: number,
-          item: HargaItem
-        ) =>
-          sum + item.harga,
-        0
-      ) / mingguIni.length
+      mingguIni.length > 0
+        ? mingguIni.reduce(
+            (
+              sum: number,
+              item: any
+            ) =>
+              sum + item.harga,
+            0
+          ) / mingguIni.length
         : 0;
 
     hargaSebelumnya =
       mingguLalu.length > 0
         ? mingguLalu.reduce(
-            (sum, item) =>
+            (
+              sum: number,
+              item: any
+            ) =>
               sum + item.harga,
             0
           ) / mingguLalu.length
@@ -288,7 +292,10 @@ export default function HargaChart({
     hargaSekarang =
       bulanIni.length > 0
         ? bulanIni.reduce(
-            (sum, item) =>
+            (
+              sum:number, 
+              item:any
+            ) =>
               sum + item.harga,
             0
           ) / bulanIni.length
@@ -297,7 +304,10 @@ export default function HargaChart({
     hargaSebelumnya =
       bulanLalu.length > 0
         ? bulanLalu.reduce(
-            (sum, item) =>
+            (
+              sum:number,
+              item:any
+            ) =>
               sum + item.harga,
             0
           ) / bulanLalu.length
