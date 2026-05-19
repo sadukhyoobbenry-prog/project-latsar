@@ -381,8 +381,8 @@ export default function UnduhHargaPage() {
                 allowInput: true,
               }}
               value={[
-                tanggalAwal,
-                tanggalAkhir,
+                tanggalAwal || undefined,
+                tanggalAkhir || undefined,
               ]}
               onChange={(
                 dates: Date[]
