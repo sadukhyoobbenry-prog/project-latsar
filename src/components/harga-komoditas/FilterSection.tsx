@@ -101,7 +101,7 @@ FilterSection({
         <div className="flex flex-col md:flex-row gap-4">
 
           {/* KOMODITAS */}
-          <div className="w-full min-w-0">
+          <div className="w-full md:min-w-[320px]">
 
             <label className="block text-sm font-medium mb-2">
               Pilih Komoditas
